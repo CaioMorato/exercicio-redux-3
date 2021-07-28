@@ -1,6 +1,5 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { connect } from 'react-redux';
 
 class Customers extends React.Component {
   constructor(props) {
@@ -65,9 +64,4 @@ class Customers extends React.Component {
   }
 }
 
-const mapStateToProps = (state) => ({
-  authenticated: state.loginReducer.authenticated,
-  customers: state.customersReducer.customers,
-});
-
-export default connect(mapStateToProps)(Customers);
+export default Customers;

@@ -1,7 +1,5 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { connect } from 'react-redux';
-import authentication from '../actions/authentication';
 
 class Login extends React.Component {
   render() {
@@ -29,8 +27,4 @@ class Login extends React.Component {
   }
 }
 
-const mapDispatchToProps = (dispatch) => ({
-  authentication: (parametro) => dispatch(authentication(parametro)),
-});
-
-export default connect(null, mapDispatchToProps)(Login);
+export default (Login);

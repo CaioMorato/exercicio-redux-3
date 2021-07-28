@@ -1,7 +1,5 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { connect } from 'react-redux';
-import registerCustomer from '../actions/registerCustomer';
 
 class Register extends React.Component {
   constructor() {
@@ -59,12 +57,4 @@ class Register extends React.Component {
   }
 }
 
-const mapStateToProps = (state) => ({
-  authenticated: state.loginReducer.authenticated,
-});
-
-const mapDispatchToProps = (dispatch) => ({
-  customers: (parametro) => dispatch(registerCustomer(parametro)),
-});
-
-export default connect(mapStateToProps, mapDispatchToProps)(Register);
+export default Register;
